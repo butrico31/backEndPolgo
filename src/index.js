@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 // usando o routes
-app.use("/winners", winnerRoutes);
+app.use("/winner", winnerRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log("excutando na porta 3000");
