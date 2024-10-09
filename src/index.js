@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(corsOptions));
 
-mongoose.connect(process.env.MONGO_CONEXAO, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_CONEXAO);
 
 // rota exemplo
 app.get("/", (req, res) => {
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 // usando o routes
-app.use("/winner", winnerRoutes);
+app.use("/winners", winnerRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log("excutando na porta 3000");
