@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(corsOptions));
 
-mongoose.connect(process.env.MONGO_CONEXAO);
+mongoose.connect(process.env.MONGO_CONEXAO, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // rota exemplo
 app.get("/", (req, res) => {
