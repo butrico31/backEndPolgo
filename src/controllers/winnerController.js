@@ -1,3 +1,4 @@
+
 const Winner = require("../models/winner");
 
 // Create
@@ -39,7 +40,7 @@ const deleteWinner = async (req, res) => {
   }
 };
 
-module.exports = { //pra poder utilizar em outros arquivos
+module.exports = { 
   createWinner,
   getWinners,
   deleteWinner,
