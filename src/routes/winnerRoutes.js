@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router(); 
-const winnerController = require("../controllers/winnerController");  
+const winnerController = require("../controllers/winnerController");
 
 // Create
 router.post("/", winnerController.createWinner); 

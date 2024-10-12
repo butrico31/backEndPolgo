@@ -17,14 +17,10 @@ app.use(cors(corsOptions));
 
 mongoose.connect(process.env.MONGO_CONEXAO);
 
-// rota exemplo
-app.get("/", (req, res) => {
-  return res.send("Hello World!");
-});
 
 // usando o routes
-app.use("/winners", winnerRoutes);
+app.use("/", winnerRoutes);
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("excutando na porta 3000");
 });
