@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_CONEXAO);
 
 
 // usando o routes
-app.use("/", winnerRoutes);
+app.use("/winners", winnerRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log("excutando na porta 3000");
